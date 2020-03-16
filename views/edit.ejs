@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../public/stylesheets/style.css">
+        <script src="../public/javascripts/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="../public/javascripts/script.js"></script>
+        <title>編集画面</title>
+    </head>
+    <body>
+    <h1 class="update_title"><span class="colored">”<%= todo.content %>”</span>を編集中...</h1>
+    <form action="/update/<%= todo.id %>" method="post">
+        <input type="hidden" name="_method" value="put">
+        <input type="text" name="editContent" value="<%= todo.content %>">
+        <input type="submit" value="更新">
+    </form>
+    </body>
+</html>

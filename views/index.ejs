@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <script src="../public/javascripts/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../public/javascripts/script.js"></script>
+    <title>ToDoリスト</title>
+  </head>
+  <body>
+    <h1 class="title">ToDoリスト</h1>
+    <div class="main">
+    <ul>
+      <% todos.map(todo => { %>
+        <li class="todo_content_list">
+          <ul class="todo_content">
+            <li>
+              <!-- 削除ボタン -->
+              <form action="/delete/<%= todo.id %>" method="POST">
+                <input type="hidden" name="_method" value="delete">
+                <input type="submit" value="" class="delete_button">
+              </form>
+            </li>
+
+            <li>
+              <!-- 項目名 -->
+              <p class="todo_text"><%= todo.content %></p>
+            </li>
+
+            <li>
+              <div class="edit">
+              <!-- 編集ボタン -->
+              <div class="edit-solid icon"></div>
+              <a href="/edit/<%= todo.id %>" class="edit_button">編集</a>
+              </div>
+            </li>
+          </ul>
+        </li>
+      <% }) %>
+    </ul>
+    <form action="/create" method="post" class="add">
+      <input type="image" src="../public/images/ add_button.png" value="作成" class="add_button">
+      <input type="text" name="todoContent" class="add_text">
+    </form>
+  </div>
+  </body>
+</html>

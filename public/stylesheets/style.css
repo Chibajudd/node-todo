@@ -1,0 +1,110 @@
+body {
+  padding: 50px;
+  font: 14px 'Hiragino Maru Gothic Pro';
+}
+
+.title{
+  font-size: 35px;
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 35px;
+  border-bottom: solid 1px #cccccc;
+}
+
+.main{
+  padding-left: 5px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+}
+
+.todo_content_list{
+  height: 25px;
+  margin-bottom: 33px;
+}
+
+.todo_content li{
+  float: left;
+}
+
+.delete_button{
+  height: 25px;
+  width: 25px;
+  border: solid 3px #cccccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor : pointer;
+}
+
+.todo_text {
+  margin: 0;
+  line-height: 26px;
+}
+
+.edit-solid.icon {
+  color: #ccc;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 15px;
+  width: 7px;
+  height: 2px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.edit-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: -1px;
+  width: 0px;
+  height: 0px;
+  border-left: solid 5px transparent;
+  border-right: solid 5px currentColor;
+  border-top: solid 2px transparent;
+  border-bottom: solid 2px transparent;
+}
+
+.edit_button{
+  color: #ccc;
+  border: none;
+  border-bottom: solid 1px #ccc;
+  margin-left: 25px;
+  cursor : pointer;
+}
+
+.add{
+  height: 50px;
+  position:relative;
+}
+
+.add_button{
+  height: 25px;
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.add_text{
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  height: 30px;
+  width: 200px;
+  position:absolute;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+}
+
+.update_title .colored{
+  color: #ccc;
+}
